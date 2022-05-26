@@ -5,7 +5,7 @@
 @section("content")
 <h1>{{$movie->title}}</h1>
 <h3>{{$movie->director}}</h3>
-<p>Genre: {{$movie->genre}}</p>
+<p>Genre: <a href="/genres/{{$movie->genre}}">{{$movie->genre}}</a></p>
 <p>Release year: {{$movie->release_year}}</p>
 <hr />
 <p>{{$movie->storyline}}</p>

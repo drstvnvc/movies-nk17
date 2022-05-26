@@ -27,19 +27,22 @@
 
 <body class="antialiased">
     <div class="container">
-        @yield('content')
-    </div>
-
-    <div>
-        <h5>Sidebar - latest movies:</h5>
-        <ul>
-
-            @foreach($latestMovies as $movie)
-            <li>
-                <a href="/movies/{{$movie->id}}">{{$movie->title}}</a>
-            </li>
-            @endforeach
-        </ul>
+        <div class="row">
+            <div class="col-md-2">
+                <h5>Sidebar - latest movies:</h5>
+                <ul>
+                    
+                    @foreach($latestMovies as $movie)
+                    <li>
+                        <a href="/movies/{{$movie->id}}">{{$movie->title}}</a>
+                    </li>
+                    @endforeach
+                </ul>
+            </div>
+            <div class="col-md-10">
+                @yield('content')
+            </div>
+        </div>
     </div>
 </body>
 
