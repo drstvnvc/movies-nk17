@@ -29,6 +29,18 @@
     <div class="container">
         @yield('content')
     </div>
+
+    <div>
+        <h5>Sidebar - latest movies:</h5>
+        <ul>
+
+            @foreach($latestMovies as $movie)
+            <li>
+                <a href="/movies/{{$movie->id}}">{{$movie->title}}</a>
+            </li>
+            @endforeach
+        </ul>
+    </div>
 </body>
 
 </html>
